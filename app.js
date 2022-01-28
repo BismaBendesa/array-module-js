@@ -92,3 +92,13 @@ console.log(wrongNewArray); // ['Indonesia', 'Filipine', 'Japanese', 'France']
 const concatedArray = thisArray.concat(['Italia, Greece']);
 console.log(concatedArray); // ['Indonesia', 'Filipine', 'Japanese', 'France', 'Italia, Greece']
 console.log(thisArray); // ['Indonesia', 'Filipine', 'Japanese', 'France']
+
+// Retrieving index with indexOf() & lastIndexOf()
+// this works fine with the primitive values but not for the reference values
+const numbersArray = [1, 2.1, 4.3, 6243.2, 4.3, 246.2];
+console.log(numbersArray.indexOf(4.3)); // 2 
+console.log(numbersArray.lastIndexOf(4.3)); // 4
+
+// reference values 
+const referenceArray = [{name: "Bruh"},{name : "Bro"}];
+console.log(referenceArray.indexOf({name: "Bruh"})); // -1

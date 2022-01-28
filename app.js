@@ -68,3 +68,22 @@ console.log(thisArray); // ['Indonesia', 'Filipine', 'Japanese']
 
 // thisArray.splice(0);
 // console.log(thisArray); // will empty the array
+
+
+// copying value and create new array using slice()
+const newArray = thisArray.slice(); 
+// remember array is a reference variable so if you want to create the exact same new array use slice();
+console.log(newArray); // ['Indonesia', 'Filipine', 'Japanese']
+
+// copying specific value with slice()
+const brandNewArray = thisArray.slice(1,2);
+console.log(brandNewArray); // [ 'Filipine']
+
+const grabArray = thisArray.slice(1);
+console.log(grabArray);// [ 'Filipine', 'Japanese']
+
+
+// this wrongNewArray just hold the address of this array
+const wrongNewArray = thisArray;
+thisArray.push('France'); // wrongNewArray is also changed even though we are changing thisArray
+console.log(wrongNewArray); // ['Indonesia', 'Filipine', 'Japanese', 'France']

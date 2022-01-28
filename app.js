@@ -120,6 +120,8 @@ const maxIndex = referenceArray.findIndex((element, index, objName) => {
   return element.hobby === "studying"; // 1 
 })
 
+
+
 console.log(bruhObject);
 console.log(maxIndex);
 
@@ -134,3 +136,13 @@ prices.forEach((price, idx , prices) => {
 });
 
 console.log(taxAdjustedPrices);
+
+// transforming data with map()
+// map() creating a new array !
+const newTaxAdjustedPrice = prices.map((price, idx , prices) => {
+  const priceObj = { index : idx , taskAdjPrice : price *(1 + tax)};
+  return priceObj;
+});
+
+
+console.log(prices , newTaxAdjustedPrice)

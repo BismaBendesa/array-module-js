@@ -122,3 +122,15 @@ const maxIndex = referenceArray.findIndex((element, index, objName) => {
 
 console.log(bruhObject);
 console.log(maxIndex);
+
+const prices = [10.88, 5.23, 3.22, 5.3];
+const tax = 0.19;
+const taxAdjustedPrices = [];
+
+// forEach() alternative loops for array
+prices.forEach((price, idx , prices) => {
+  const priceObj = {index : idx, taxAdjPrice : price * (1 + tax)};
+  taxAdjustedPrices.push(priceObj);
+});
+
+console.log(taxAdjustedPrices);

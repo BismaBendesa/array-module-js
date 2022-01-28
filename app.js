@@ -186,3 +186,11 @@ console.log(reducedPrice);
 // again we can shorter this code by using function arrow
 const reducedPrices = prices.reduce((prevVal, currentVal) => prevVal + currentVal, 0);
 console.log(reducedPrices);
+
+
+// transforming string into array using split() and array into string using join()
+const data = 'Sea Of Quanta;1109;Protein';
+console.log(data.split(';')); //['Sea Of Quanta', '1109', 'Protein']
+
+const arrayName = ['Baba', 'Yaga'];
+console.log(arrayName.join(' '/*this is a separator*/))

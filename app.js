@@ -174,3 +174,15 @@ console.log(prices.reverse()) // [3.22, 5.23, 5.3, 10.88]
 // Filtering arrays with filter() & shortens with arrow function
 const filteredArray = prices.filter(p => p > 6  /*[10.88]*/); // the filter can still hold the index parameter and array parameter
 console.log(filteredArray);
+
+
+// Combining all the value into a single value in array with reduce()
+const reducedPrice = prices.reduce((prevVal, currentVal, currentIdx, prices) => {
+  return prevVal + currentVal;
+}, 0 /* 0 is initial value in this case*/); 
+
+console.log(reducedPrice);
+
+// again we can shorter this code by using function arrow
+const reducedPrices = prices.reduce((prevVal, currentVal) => prevVal + currentVal, 0);
+console.log(reducedPrices);

@@ -171,10 +171,6 @@ console.log(prices); // [10.88, 5.3, 5.23, 3.22]
 console.log(prices.reverse()) // [3.22, 5.23, 5.3, 10.88]
 
 
-// Filtering arrays with filter()
-const filteredArray = prices.filter((price, idx , prices) => {
-  // return price > 6 ; // [10.88]
-  return idx > 1; // [5.3, 10.88]
-});
-
+// Filtering arrays with filter() & shortens with arrow function
+const filteredArray = prices.filter(p => p > 6  /*[10.88]*/); // the filter can still hold the index parameter and array parameter
 console.log(filteredArray);

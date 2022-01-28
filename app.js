@@ -98,6 +98,8 @@ console.log(thisArray); // ['Indonesia', 'Filipine', 'Japanese', 'France']
 const numbersArray = [1, 2.1, 4.3, 6243.2, 4.3, 246.2];
 console.log(numbersArray.indexOf(4.3)); // 2 
 console.log(numbersArray.lastIndexOf(4.3)); // 4
+console.log(numbersArray.includes(4.3)); // true 
+console.log(numbersArray.indexOf(4.3) !== -1); // true
 
 // reference values using indexOf()
 const referenceArray = [{name: "Bruh" , hobby : 'gaming'},{name : "Bro", hobby : 'studying'}];

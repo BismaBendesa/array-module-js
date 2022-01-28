@@ -87,3 +87,8 @@ console.log(grabArray);// [ 'Filipine', 'Japanese']
 const wrongNewArray = thisArray;
 thisArray.push('France'); // wrongNewArray is also changed even though we are changing thisArray
 console.log(wrongNewArray); // ['Indonesia', 'Filipine', 'Japanese', 'France']
+
+// Combine array & store value in the new array with concat()
+const concatedArray = thisArray.concat(['Italia, Greece']);
+console.log(concatedArray); // ['Indonesia', 'Filipine', 'Japanese', 'France', 'Italia, Greece']
+console.log(thisArray); // ['Indonesia', 'Filipine', 'Japanese', 'France']

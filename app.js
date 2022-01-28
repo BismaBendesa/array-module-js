@@ -144,5 +144,28 @@ const newTaxAdjustedPrice = prices.map((price, idx , prices) => {
   return priceObj;
 });
 
-
 console.log(prices , newTaxAdjustedPrice)
+
+// sort() and reverse()
+const sortedPrices = prices.sort((a,b) =>{
+  // sort to descending value from array
+  if (a > b){
+    return -1;
+  } else if (a === b){
+    return 0;
+  } else{
+    return 1;
+  }
+
+  // sorting a ascending value from array
+  // if (a > b){
+  //   return 1;
+  // } else if (a === b){
+  //   return 0;
+  // } else{
+  //   return -1;
+  // }
+
+});
+console.log(prices); // [10.88, 5.3, 5.23, 3.22]
+console.log(prices.reverse()) // [3.22, 5.23, 5.3, 10.88]

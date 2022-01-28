@@ -99,6 +99,24 @@ const numbersArray = [1, 2.1, 4.3, 6243.2, 4.3, 246.2];
 console.log(numbersArray.indexOf(4.3)); // 2 
 console.log(numbersArray.lastIndexOf(4.3)); // 4
 
-// reference values 
-const referenceArray = [{name: "Bruh"},{name : "Bro"}];
+// reference values using indexOf()
+const referenceArray = [{name: "Bruh" , hobby : 'gaming'},{name : "Bro", hobby : 'studying'}];
 console.log(referenceArray.indexOf({name: "Bruh"})); // -1
+
+// finding stuff using find() findIndex()
+// keep in mind that find didn't create new array
+
+// find()
+const bruhObject = referenceArray.find((element , index, objName) => {
+  return element.name === 'Bruh'; // {name : Bruh}
+  // return index == 1; // {name: 'Bro', hobby: 'studying'}
+  // return objName = {name: "Bruh" , hobby : 'gaming'}; // {name: "Bruh" , hobby : 'gaming'}
+});
+
+// findIndex()
+const maxIndex = referenceArray.findIndex((element, index, objName) => {
+  return element.hobby === "studying"; // 1 
+})
+
+console.log(bruhObject);
+console.log(maxIndex);

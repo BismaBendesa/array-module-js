@@ -211,3 +211,12 @@ const copiedPersons = persons.map(person => ({
 copiedPersons.push({name : 'dababy', age: 23});
 persons[0].age = 12;
 console.log(persons, copiedPersons);
+
+
+// array destructuring
+const nameData = ['mamamia', 'lezatos', 123, 'bruh'];
+// destructuring the nameData array to a variable
+const [ firstname, lastname, ...otherArguments] = nameData;
+
+console.log(firstname, lastname, otherArguments);
+

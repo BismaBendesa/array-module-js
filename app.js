@@ -194,3 +194,20 @@ console.log(data.split(';')); //['Sea Of Quanta', '1109', 'Protein']
 
 const arrayName = ['Baba', 'Yaga'];
 console.log(arrayName.join(' '/*this is a separator*/))
+
+// the spread operator helps getting value of an array
+const copiedNameFragments = [...arrayName];
+arrayName.push('BRO');
+console.log(arrayName, copiedNameFragments);
+
+console.log(Math.min(...prices));
+
+const persons = [{username : 'babayaga', age : 10}, {username : 'dabomb', age : 123}];
+// copying array with map to prevent pointer value
+const copiedPersons = persons.map(person => ({
+  username : person.username,
+  age : person.age
+}));
+copiedPersons.push({name : 'dababy', age: 23});
+persons[0].age = 12;
+console.log(persons, copiedPersons);
